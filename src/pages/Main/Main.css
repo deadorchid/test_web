@@ -1,0 +1,82 @@
+.main_header {
+    display: flex;
+    height: 15%;
+    margin: 30px 0;
+    align-items: center;
+  }
+
+  .main_header_popup {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(gray, 10%, black);
+    border-radius: 5px;
+    margin: 5px;
+  }
+
+  .push {
+    margin-left: auto;
+  }
+  
+
+  .main_header_avatar {
+    width: 50px;
+    height: 50px;
+    background: gray;
+    border-radius: 40px;
+  }
+
+  .coins {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .coins_icon {
+    background: url('../../assets/icons/croco_coin.png');
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .coins_count {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .coin {
+    width: 290px;
+    height: 290px;
+    border-radius: 150px;
+    margin: 0 auto;
+    background: linear-gradient(#006434, #005F59);
+    padding: 10px;
+  }
+
+  .coin_image {
+    background: url('../../assets/icons/tap_coin.png');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+.coin:active {
+  transform: scale(1.1, 0.9);
+  transition: all 0.1s ease-in;
+}
+
+  .energy {
+    height: 50px;
+    position: relative;
+  }
+  
+  .rank {
+    width: 300px;
+    height: 100px;
+    background-color: black;
+    border-radius: 10px;
+    margin: 0 auto;
+  }  

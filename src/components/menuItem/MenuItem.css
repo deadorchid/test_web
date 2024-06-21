@@ -1,0 +1,9 @@
+.menu_item {
+    margin: 5px;
+    text-align: center;
+}
+  
+.menu_item > p {
+    font-size: 12px;
+    margin: 5px 0;
+}
