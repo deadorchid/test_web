@@ -16,20 +16,30 @@ export default function App() {
   
   function fetchData() {
     setData({
-      coins: 1000000,
-      maxEnergy: 10000,
-      energy: 10000
+      coins: 0,
+      maxEnergy: 1000,
+      energy: 1000,
+      oneTap: 1,
+      oneSec: 10,
     })
   }
   useEffect(() => {
     fetchData()
   }, [])
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+        setData({...data, coins: data.coins + data.oneSec})
+    }, 1000)
+
+    return () => clearInterval(timer)
+  })
   
   function handleCoinClick() {
-    if((data.energy-10) < 0) {
+    if((data.energy-data.oneTap) < 0) {
       return
     }
-    setData({coins: data.coins+10, maxEnergy: 10000, energy: data.energy-10})
+    setData({...data, coins: data.coins+data.oneTap, energy: data.energy-data.oneTap})
   }
   return (
   <div className="app">
